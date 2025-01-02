@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <!-- Подключаем Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3h3HLRkZ3+KnujsHcebfNFSZy5jYoVR9IV+RhJXUw3YxjUlLuj5yS1X01" crossorigin="anonymous">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Навигационный бар */
+        .navbar {
+            background-color: #343a40;
+            border-bottom: 1px solid #dee2e6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            font-size: 1.1rem;
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        /* Основной контейнер */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Заголовки */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4a5f9b;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        /* Секции с информацией */
+        .info-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-section h2 {
+            font-size: 2rem;
+            color: #6c757d;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        /* Анимация для карточек */
+        .info-section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Кнопка главная */
+        .btn-main {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-main:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Мобильная адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .info-section {
+                padding: 30px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигационный бар -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Marketplace</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Профиль</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <div class="container">
+
+        <!-- Главный заголовок -->
+        <h1>Добро пожаловать в Marketplace</h1>
+
+        <!-- Информация 1 -->
+        <div class="info-section">
+            <h2>Что такое Marketplace?</h2>
+            <p>Marketplace - это современная платформа для торговли, где вы можете легко находить и продавать товары. Мы предоставляем удобные инструменты для управления вашим профилем и бизнесом.</p>
+        </div>
+
+        <!-- Информация 2 -->
+        <div class="info-section">
+            <h2>Как это работает?</h2>
+            <p>Просто зарегистрируйтесь, добавьте товары и начните продавать! Мы предлагаем простую и удобную систему для пользователей всех уровней.</p>
+        </div>
+
+        <!-- Информация 3 -->
+        <div class="info-section">
+            <h2>Готовы начать?</h2>
+            <p>Зарегистрируйтесь, чтобы получить доступ ко всем функциям сайта и начать использовать Marketplace.</p>
+            <a href="#" class="btn-main">Зарегистрироваться</a>
+        </div>
+
+    </div>
+
+    <!-- Футер -->
+    <div class="footer">
+        <p>&copy; 2024 Marketplace. Все права защищены.</p>
+    </div>
+
+    <!-- Подключаем Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76pGxO7pytkwEDnN6PCFL3TzCvAbl2lDrq4q60u9lj9YOuSbW4ZXWjcjddPzPz6" crossorigin="anonymous"></script>
+</body>
+</html>

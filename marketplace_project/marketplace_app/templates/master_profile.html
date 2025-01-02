@@ -1,0 +1,26 @@
+<!-- templates/master_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль мастера</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>Профиль мастера: {{ master.user.username }}</h1>
+    <h2>Описание:</h2>
+    <p>{{ master.description }}</p>
+    <h2>Портфолио:</h2>
+    <img src="{{ master.portfolio.url }}" alt="Портфолио мастера" />
+    <h2>Отзывы:</h2>
+    <ul>
+        {% for review in reviews %}
+            <li>{{ review.client.username }}: {{ review.rating }} stars - {{ review.comment }}</li>
+        {% empty %}
+            <li>Нет отзывов.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

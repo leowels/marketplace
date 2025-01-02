@@ -1,0 +1,24 @@
+<!-- templates/view_master.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр мастера</title>
+</head>
+<body>
+    <h1>Профиль мастера: {{ master.user.username }}</h1>
+    <h2>Описание:</h2>
+    <p>{{ master.description }}</p>
+    <h2>Портфолио:</h2>
+    <img src="{{ master.portfolio.url }}" alt="Портфолио мастера" />
+    
+    <h2>Бронирование</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="order_time">Выберите время для записи:</label>
+        <input type="datetime-local" id="order_time" name="order_time" required>
+        <button type="submit">Забронировать</button>
+    </form>
+</body>
+</html>

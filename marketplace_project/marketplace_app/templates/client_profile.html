@@ -1,0 +1,20 @@
+<!-- templates/client_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль клиента</title>
+</head>
+<body>
+    <h1>Профиль клиента</h1>
+    <h2>Ваши заказы</h2>
+    <ul>
+        {% for order in orders %}
+            <li>Заказ на {{ order.master }} на {{ order.time }} - Статус: {{ order.status }}</li>
+        {% empty %}
+            <li>У вас нет заказов.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

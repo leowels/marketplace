@@ -1,0 +1,95 @@
+<!-- templates/register_client.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация клиента</title>
+
+    <style>
+        /* Основные стили для всей страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Контейнер для формы */
+        .container {
+            margin-top: 50px;
+        }
+
+        /* Карточка формы */
+        .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Заголовок формы */
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #5c6bc0;
+        }
+
+        /* Внешний вид кнопок */
+        .btn-primary {
+            background-color: #5c6bc0;
+            border-color: #5c6bc0;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #4a5f9b;
+            border-color: #4a5f9b;
+        }
+
+        /* Текстовая ссылка для входа */
+        .btn-link {
+            color: #5c6bc0;
+            font-size: 0.9rem;
+        }
+
+        .btn-link:hover {
+            color: #4a5f9b;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f1f1f1;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Поле ввода для формы */
+        input.form-control {
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        /* Анимация при фокусе на поля ввода */
+        input.form-control:focus {
+            border-color: #5c6bc0;
+            box-shadow: 0 0 5px rgba(92, 107, 192, 0.5);
+        }
+
+        /* Дополнительные отступы для footer */
+        .footer p {
+            margin-bottom: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Регистрация клиента</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>

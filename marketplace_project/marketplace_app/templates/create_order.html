@@ -1,0 +1,19 @@
+<!-- templates/create_order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание заказа</title>
+</head>
+<body>
+    <h1>Бронирование с мастером: {{ master.user.username }}</h1>
+    
+    <h2>Выберите время для записи:</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Забронировать</button>
+    </form>
+</body>
+</html>
